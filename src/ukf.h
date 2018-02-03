@@ -102,6 +102,12 @@ public:
    * @param meas_package The measurement at k+1
    */
   void UpdateRadar(MeasurementPackage meas_package);
+
+private:
+
+  void NormalizeAngle(double& phi);
+  MatrixXd R_lidar_;
+  MatrixXd R_radar_;
 };
 
 #endif /* UKF_H */
